@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: green;
+   
+}
+
+.book-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db; /* Vibrant blue */
+    color: white;
+}
+
+.book-info img.book-cover {
+    max-width: 100px; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+.book-content {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initially hidden */
+    width: 100%; /* Full width to cover display */
+    height: 100vh; /* Full height of the viewport */
+    background-color: white; /* White background */
+    padding: 20px;
+    transition: left 1s; /* Smooth animation for revealing */
+}
+
+.book-content.opened {
+    left: 0; /* Reveal the content */
+}
+
+.reading-section {
+    margin: 20px 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.book-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db; /* Vibrant blue */
+    color: white;
+}
+/* Navigation buttons */
+.chapter-navigation {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.chapter-navigation button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #3498db; /* Vibrant blue */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chapter-navigation button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Chapter styling */
+.chapter {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333;
+    transition: all 0.5s; /* Smooth transitions */
+}
+
+.chapter h2 {
+    color: #3498db; /* Vibrant blue for headings */
+}
+
+.chapter p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+.chapters
+{
+    padding: 10px;
+   
+   
+
+
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open E-Library</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="scripts.js"></script> 
+    <script>
+        function searchBooks() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const bookCards = document.querySelectorAll('.book-card');
+
+            bookCards.forEach(bookCard => {
+                const bookName = bookCard.getAttribute('data-book-name').toLowerCase();
+                if (bookName.includes(searchInput)) {
+                    bookCard.style.display = ''; 
+                } else {
+                    bookCard.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header" id="home">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./images/image-removebg-preview.png" alt="">
+               
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <section class="search-box">
+        <input type="text" placeholder="Search for books..." />
+        <button onclick="search()">Search</button>
+    </section>
+
+    <section class="intro-text">
+        <p>
+            Welcome to the Open E-Library! Explore our extensive collection of books and find your next favorite read.
+            Use the search box above to find specific books or browse through the collection below.
+        </p>
+    </section>
+
+    
+    <section class="horizontal-scroll">
+        <div class="scrolling-container">
+          
+            <div class="scroll-item">
+                <img src="https://m.media-amazon.com/images/I/81Ls+SBCLiL._AC_UF1000,1000_QL80_.jpg" alt="ATOMIC HABBIT ">
+                <p>ATOMIC HABBIT</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_kjmbM6MQ31JkjQyr-MONrLHQ54nREmasw&s" alt="Book B">
+                <p>Phychology of Money</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/82/175382-050-8B76E4A8/Greta-Garbo-Anna-Karenina-Clarence-Brown.jpg?w=600&q=60" alt="Book C">
+                <p>Anna Karenina</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/21/182021-131-90346745/book-cover-To-Kill-a-Mockingbird-many-1961.jpg?w=600&q=60" alt="Book D">
+                <p>To Kill a Mockingbird</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/47/24647-050-E6E25F22/F-Scott-Fitzgerald.jpg?w=600&q=60" alt="Book E">
+                <p>The Great Gatsby</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/03/11603-131-83A4BA28/Gabriel-Garcia-Marquez-1982.jpg?w=600&q=60" alt="Book E">
+                <p>One Hundred Years of Solitude</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/27/213827-050-60818431/movie-still-Passage-to-India-1984.jpg?w=600&q=60" alt="Book E">
+                <p>A Passage to India</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/82/138382-131-3815E927/Virginia-Woolf.jpg?w=600&q=60" alt="Book E">
+                <p>Mrs. Dalloway</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/94/98994-050-2E304987/Illustration-edition-Fritz-Eichenberg-American-Jane-Eyre.jpg?w=600&q=60" alt="Book E">
+                <p>Jane Eyre</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="topcol">
+        <h1>TOP COLLECTIONS! </h1>
+        <div class="card">
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/47/24647-050-E6E25F22/F-Scott-Fitzgerald.jpg?w=600&q=60" alt="Book E">
+                <p>The Great Gatsby</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/03/11603-131-83A4BA28/Gabriel-Garcia-Marquez-1982.jpg?w=600&q=60" alt="Book E">
+                <p>One Hundred Years of Solitude</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/27/213827-050-60818431/movie-still-Passage-to-India-1984.jpg?w=600&q=60" alt="Book E">
+                <p>A Passage to India</p>
+            </div>
+            <div class="scroll-item">
+                <img src="https://cdn.britannica.com/82/138382-131-3815E927/Virginia-Woolf.jpg?w=600&q=60" alt="Book E">
+                <p>Mrs. Dalloway</p>
+        </div>
+    </section>
+    <div class=" top">
+        <h1>Trending Books</h1>
+    </div>
+
+    <div class="dmi">
+        <section id="book-cards">
+          
+            <div>
+                <script>
+                    const books = [
+                        { name: 'Pride and Prejudice', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1492779471/pro_pbid_386606.jpg' },
+                        { name: 'One Hundred Years ', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1706742432/pro_pbid_3561475.jpg' },
+                        { name: 'Don Quixote', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1655229287/pro_pbid_614990.jpg' },
+                        { name: 'Nineteen Eighty-Four', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1654189843/pro_pbid_507047.jpg' },
+                        { name: 'Great Expectations', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1468757916/pro_pbid_956848.jpg' },
+                        { name: 'Catch-22', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1584987583/pro_pbid_330484.jpg' },
+                        { name: 'Frankenstein', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1677522895/pro_pbid_288869.jpg' },
+                        { name: 'The tale', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1542815085/pro_pbid_112370.jpg' },
+                        { name: 'A Tree9', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1557422591/pro_pbid_4184.jpg' },
+                        { name: 'The Color', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1528266277/pro_pbid_3783.jpg' },
+                        { name: 'Anna Karenina', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1688679280/pro_pbid_90861.jpg' },
+                        { name: ' Let Me Go', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1623039368/pro_pbid_228998.jpg' },
+                        { name: ' Fall Apart', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1641218380/pro_pbid_832009.jpg' },
+                        { name: 'Beloved', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1607370698/pro_pbid_319572.jpg' },
+                        { name: 'Lolita', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1556913970/pro_pbid_325916.jpg' },
+                        { name: 'Ackroyd', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1638670152/pro_pbid_22167.jpg' },
+                        { name: ' Rings', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1686191007/pro_pbid_290943.jpg' },
+                        { name: 'Brilliant Friend', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1634337433/pro_pbid_826825.jpg' },
+                        { name: 'Harry Potter', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1686587885/pro_pbid_21798.jpg' },
+                        { name: 'The Rabbit Hutch', image: 'https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_padded,f_auto,q_auto,dpr_1/v1692587639/pro_pbid_4959133.jpg' }
+                        
+                    ];
+        
+                    books.forEach(book => {
+    const bookCard = document.createElement('div');
+    bookCard.className = 'book-card';
+    bookCard.innerHTML = `
+        <img src="${book.image}" alt="${book.name}">
+        <h3>${book.name}</h3>
+        <div class="book-card-buttons">
+            <button onclick="goToPage()">Read</button> <!-- Connect to page.html -->
+            <button onclick="downloadBook()">Download</button>
+        </div>
+    `;
+    document.getElementById('book-cards').appendChild(bookCard);
+});
+
+function goToPage() {
+    window.location.href = 'page.html'; 
+}
+                </script>
+
+            </div>
+        </section></div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions, feedback, or suggestions? We'd love to hear from you. Fill out the form below and we'll get back to you soon!</p>
+    
+            <form id="contact-form">
+                <div>
+                    <label for="contact-name">Your Name:</label>
+                    <input type="text" id="contact-name" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <label for="contact-email">Your Email:</label>
+                    <input type="email" id="contact-email" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="contact-message">Your Message:</label>
+                    <textarea id="contact-message" placeholder="Enter your message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    <section id="about">
+        <h2>About the Open E-Library</h2>
+        <p>
+            The Open E-Library provides a comprehensive collection of books across various genres.
+            Our mission is to promote accessible reading for everyone.
+        </p>
+    </section>
+</body>
+</html>

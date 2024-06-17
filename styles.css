@@ -1,0 +1,302 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5DEBD7; 
+}
+
+
+.site-header {
+    background-color: #074173; 
+    padding: 10px 0;
+    text-align: center;
+}
+.topcol
+{
+    text-align: center;
+   font-size: larger;
+    background-color: #1679AB; 
+   ;
+   
+}
+.card
+{
+    display: flex;
+    justify-content: center;
+
+}
+.card img{
+    
+    width: 100%;
+    filter: grayscale(100%);
+    height: 100%; 
+
+}
+.card:hover{
+   transform: scale(1.03 );
+   transition: 200ms;
+   filter: drop-shadow(0 0 20px #343534)
+}
+.card:hover img{
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+.card figcaption
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    font-size: 16px;
+    height: 20%;
+    opacity: 0;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg,rgba(0,0,0,0.5)0%,rgba(255,255,255 0.5 ));
+    transition: 0.3s;
+}
+.card:hover figcaption
+{
+    opacity: 1;
+    transform: scale(1.03);
+    cursor: pointer;
+ 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #FFFFFF; 
+    font-weight: bold;
+}
+
+.search-box {
+    text-align: center;
+    padding: 20px;
+    background-color: #23c5af; 
+    transition: background-color 0.5s; 
+}
+
+.search-box input {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px; 
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF5722;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s; 
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #E64A19; 
+    transform: scale(1.1); 
+}
+
+.intro-text {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFF3E0; 
+}
+
+.intro-text p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.horizontal-scroll {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230526/pngtree-an-old-bookcase-in-a-library-image_2642908.jpg);
+    padding: 20px;
+    overflow-x: hidden; 
+}
+
+.scrolling-container {
+    display: flex;
+    animation: scroll-horizontal 30s linear infinite; 
+}
+
+.scroll-item {
+    flex-shrink: 0;
+    padding: 10px;
+    text-align: center;
+    min-width: 150px;
+}
+
+.scroll-item img {
+    width: 120px;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.scroll-item p {
+    color: #FFFFFF;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+ .top
+ {
+    display: flex;
+
+    justify-content: center;
+    
+ }
+#book-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.book-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+
+.book-card img {
+    width: 120px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.book-card h3 {
+    margin-top: 10px;
+}
+
+.book-card-buttons {
+    margin-top: 10px;
+}
+
+.book-card-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #48247f; 
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.book-card-buttons button:hover {
+    background-color: #E64A19;
+    transform: scale(1.2); 
+}
+
+#about {
+    padding: 20px;
+    text-align: center;
+    background-color:#C5FF95;
+}
+#contact {
+    padding: 40px 20px; 
+    background-color: #FFE0B2; 
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5722; 
+}
+
+#contact p {
+    font-size: 16px; 
+    color: #666666; 
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+#contact-form div {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block; 
+    font-weight: bold;
+    color: #FF5722; 
+    margin-bottom: 5px; 
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 16px; 
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    background-color: #FF5722;
+    color: white; 
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; 
+    cursor: pointer; 
+}
+
+#contact-form button:hover {
+    background-color: #E64A19; 
+    transform: scale(1.1); 
+}
+
+
+
+
+
+
+
